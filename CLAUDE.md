@@ -65,7 +65,7 @@ is topological, so a clean build works in one command.
 
 ## The native app contract (PST-P-19, PST-P-20)
 
-D3 Constellation reaches Postroom through the D3 App contract (`matdemers1/d3-app-contract`,
+D3 Constellation reaches Postroom through the D3 App contract (`D3Cloud-io/d3-app-contract`,
 CON-ADR-003). All of it is `apps/api/src/auth/native.ts`, `native-sessions.ts` and `d3auth-bearer.ts`:
 
 - `GET /.well-known/d3-app.json` — the manifest, endpoints on `webOrigin`. `d3auth` and `link` appear
@@ -118,6 +118,6 @@ CON-ADR-003). All of it is `apps/api/src/auth/native.ts`, `native-sessions.ts` a
 - Conformance: `apps/api/test/conformance-server.ts` boots the api on a throwaway database — the
   conformance admin as the only owner, an unused member invite and a disposable member — and writes
   the suite's arguments (CI passes `--main-is-last-owner --invite-token --delete-*`); CI's
-  `conformance` job runs `ghcr.io/matdemers1/d3-app-conformance:contract-1` against it, with no
+  `conformance` job runs `ghcr.io/d3cloud-io/d3-app-conformance:contract-1` against it, with no
   token; when the image cannot be pulled, `contract-suite` writes the reason to its summary and
   `conformance` is skipped, never green (CON-T-002).

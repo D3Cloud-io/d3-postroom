@@ -449,7 +449,7 @@ export class ImapSession {
           idResponse([
             ['name', 'Postroom'],
             ['vendor', 'Postroom'],
-            ['support-url', 'https://github.com/matdemers1/d3-postroom'],
+            ['support-url', 'https://github.com/D3Cloud-io/d3-postroom'],
           ]),
         );
         return ok('ID completed');

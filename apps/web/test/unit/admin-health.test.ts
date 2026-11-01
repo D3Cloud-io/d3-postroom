@@ -248,7 +248,7 @@ describe('Health speaks plainly (PST-T-16.5, PST-DA-033)', () => {
     expect(tileAction(tile({ id: 'queue', state: 'down' }))).toEqual({ label: 'View dead jobs', href: '/admin/jobs?status=dead', external: false });
     expect(tileAction(tile({ id: 'backup', state: 'down' }))).toEqual({ label: 'Backup runbook', href: BACKUP_RUNBOOK_URL, external: true });
     expect(tileAction(tile({ id: 'drill', state: 'warn' }))?.href).toBe(BACKUP_RUNBOOK_URL);
-    expect(BACKUP_RUNBOOK_URL).toBe('https://github.com/matdemers1/d3-postroom/blob/main/docs/runbooks/backups.md');
+    expect(BACKUP_RUNBOOK_URL).toBe('https://github.com/D3Cloud-io/d3-postroom/blob/main/docs/runbooks/backups.md');
   });
 
   it('offers no link for a check that is fine, not checked, or has no fix screen; OK stays neutral', () => {

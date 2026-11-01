@@ -9,7 +9,7 @@
 name: postroom
 
 x-app: &app
-  image: ghcr.io/matdemers1/d3-postroom/server:${POSTROOM_TAG:-local}
+  image: ghcr.io/d3cloud-io/d3-postroom/server:${POSTROOM_TAG:-local}
   env_file:
     - path: .env
       required: false
@@ -34,7 +34,7 @@ services:
   # The network namespace the protocol daemons live in. With WG_* set it brings up wg0 to the edge
   # (PST-T-0.14); without, it is a bare namespace so the stack still runs on a laptop and in CI.
   wireguard:
-    image: ghcr.io/matdemers1/d3-postroom/wireguard:${POSTROOM_TAG:-local}
+    image: ghcr.io/d3cloud-io/d3-postroom/wireguard:${POSTROOM_TAG:-local}
     build: { context: docker/wireguard }
     cap_add: [NET_ADMIN]
     env_file:

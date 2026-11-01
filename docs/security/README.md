@@ -65,7 +65,7 @@ Semgrep scans the files git tracks: stage a new file before expecting it to be s
 
 ```bash
 export COMPOSE_FILE=docker-compose.yml:docker-compose.e2e.yml E2E_KEK="$(openssl rand -base64 32)"
-docker build -t ghcr.io/matdemers1/d3-postroom/server:local . && docker compose build wireguard
+docker build -t ghcr.io/d3cloud-io/d3-postroom/server:local . && docker compose build wireguard
 docker compose up -d --wait postgres
 docker compose run --rm migrate && docker compose run --rm migrate seed
 docker compose up -d --wait

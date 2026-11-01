@@ -17,7 +17,7 @@ export const MAX_BYTES = 10 * 1024 * 1024;
 export const TIMEOUT_MS = 10_000;
 const MAX_REDIRECTS = 3;
 const PORTS = new Set([80, 443, 8080, 8443]);
-export const PROXY_USER_AGENT = 'Postroom-ImageProxy/1 (+https://github.com/matdemers1/d3-postroom)';
+export const PROXY_USER_AGENT = 'Postroom-ImageProxy/1 (+https://github.com/D3Cloud-io/d3-postroom)';
 
 const blocked = new BlockList();
 for (const [net, prefix] of [

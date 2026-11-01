@@ -10,7 +10,7 @@ risk are welcome and are read.
 **Please do not open a public GitHub issue for a security report.**
 
 Use GitHub's private vulnerability reporting instead:
-[github.com/matdemers1/d3-postroom/security/advisories/new](https://github.com/matdemers1/d3-postroom/security/advisories/new).
+[github.com/D3Cloud-io/d3-postroom/security/advisories/new](https://github.com/D3Cloud-io/d3-postroom/security/advisories/new).
 That opens a private advisory visible only to the maintainer and you, with its own thread for
 follow-up questions and, if a fix is needed, a coordinated disclosure timeline.
 

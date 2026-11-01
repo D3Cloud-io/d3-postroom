@@ -154,7 +154,7 @@ export async function postOneClick(rawUrl: string, policy: FetchPolicy): Promise
           signal: controller.signal,
           agent: false,
           headers: {
-            'user-agent': 'Postroom-Unsubscribe/1 (+https://github.com/matdemers1/d3-postroom)',
+            'user-agent': 'Postroom-Unsubscribe/1 (+https://github.com/D3Cloud-io/d3-postroom)',
             'content-type': 'application/x-www-form-urlencoded',
             'content-length': String(body.length),
           },

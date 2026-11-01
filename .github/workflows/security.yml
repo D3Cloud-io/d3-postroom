@@ -107,7 +107,7 @@ jobs:
         run: echo "E2E_KEK=$(openssl rand -base64 32)" >> "$GITHUB_ENV"
       - name: Build the images from this commit
         run: |
-          docker build -t ghcr.io/matdemers1/d3-postroom/server:local .
+          docker build -t ghcr.io/d3cloud-io/d3-postroom/server:local .
           docker compose build wireguard
       - name: Boot on an empty database, migrate, seed
         run: |

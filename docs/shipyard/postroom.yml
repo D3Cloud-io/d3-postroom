@@ -5,7 +5,7 @@
 # migration is an explicit one-shot with the NEW image before the swap — Postroom never migrates on
 # boot. /health on the api answers {status, revision, schemaRevision}.
 name: postroom
-repo: matdemers1/d3-postroom
+repo: D3Cloud-io/d3-postroom
 workflow: ci.yml
 compose:
   files:
@@ -13,15 +13,15 @@ compose:
     - /DATA/postroom/docker-compose.tunnel.yml
   project: postroom
 services:
-  api: { image: ghcr.io/matdemers1/d3-postroom/server }
-  worker: { image: ghcr.io/matdemers1/d3-postroom/server }
-  smtp-in: { image: ghcr.io/matdemers1/d3-postroom/server }
-  submission: { image: ghcr.io/matdemers1/d3-postroom/server }
-  imap: { image: ghcr.io/matdemers1/d3-postroom/server }
-  managesieve: { image: ghcr.io/matdemers1/d3-postroom/server }
-  delivery: { image: ghcr.io/matdemers1/d3-postroom/server }
-  dav: { image: ghcr.io/matdemers1/d3-postroom/server }
-  wireguard: { image: ghcr.io/matdemers1/d3-postroom/wireguard }
+  api: { image: ghcr.io/d3cloud-io/d3-postroom/server }
+  worker: { image: ghcr.io/d3cloud-io/d3-postroom/server }
+  smtp-in: { image: ghcr.io/d3cloud-io/d3-postroom/server }
+  submission: { image: ghcr.io/d3cloud-io/d3-postroom/server }
+  imap: { image: ghcr.io/d3cloud-io/d3-postroom/server }
+  managesieve: { image: ghcr.io/d3cloud-io/d3-postroom/server }
+  delivery: { image: ghcr.io/d3cloud-io/d3-postroom/server }
+  dav: { image: ghcr.io/d3cloud-io/d3-postroom/server }
+  wireguard: { image: ghcr.io/d3cloud-io/d3-postroom/wireguard }
 health:
   service: api
   port: 3300

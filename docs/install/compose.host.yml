@@ -6,7 +6,7 @@ name: postroom
 
 services:
   wireguard:
-    image: ghcr.io/matdemers1/d3-postroom/wireguard:sha-SHA
+    image: ghcr.io/d3cloud-io/d3-postroom/wireguard:sha-SHA
     cap_add: [NET_ADMIN]
     env_file: [/DATA/postroom/postroom.env]
     sysctls:
@@ -17,7 +17,7 @@ services:
       interval: 10s
       retries: 6
   smtp-in:
-    image: ghcr.io/matdemers1/d3-postroom/server:sha-SHA
+    image: ghcr.io/d3cloud-io/d3-postroom/server:sha-SHA
     command: ["smtp-in"]
     env_file: [/DATA/postroom/postroom.env]
     environment:
@@ -33,7 +33,7 @@ services:
       postgres: { condition: service_healthy }
       wireguard: { condition: service_started }
   submission:
-    image: ghcr.io/matdemers1/d3-postroom/server:sha-SHA
+    image: ghcr.io/d3cloud-io/d3-postroom/server:sha-SHA
     command: ["submission"]
     env_file: [/DATA/postroom/postroom.env]
     environment:
@@ -49,7 +49,7 @@ services:
       postgres: { condition: service_healthy }
       wireguard: { condition: service_started }
   imap:
-    image: ghcr.io/matdemers1/d3-postroom/server:sha-SHA
+    image: ghcr.io/d3cloud-io/d3-postroom/server:sha-SHA
     command: ["imap"]
     env_file: [/DATA/postroom/postroom.env]
     environment:
@@ -65,7 +65,7 @@ services:
       postgres: { condition: service_healthy }
       wireguard: { condition: service_started }
   managesieve:
-    image: ghcr.io/matdemers1/d3-postroom/server:sha-SHA
+    image: ghcr.io/d3cloud-io/d3-postroom/server:sha-SHA
     command: ["managesieve"]
     env_file: [/DATA/postroom/postroom.env]
     environment:
@@ -79,7 +79,7 @@ services:
       postgres: { condition: service_healthy }
       wireguard: { condition: service_started }
   delivery:
-    image: ghcr.io/matdemers1/d3-postroom/server:sha-SHA
+    image: ghcr.io/d3cloud-io/d3-postroom/server:sha-SHA
     command: ["delivery"]
     env_file: [/DATA/postroom/postroom.env]
     environment:
@@ -91,7 +91,7 @@ services:
       postgres: { condition: service_healthy }
       wireguard: { condition: service_started }
   dav:
-    image: ghcr.io/matdemers1/d3-postroom/server:sha-SHA
+    image: ghcr.io/d3cloud-io/d3-postroom/server:sha-SHA
     command: ["dav"]
     env_file: [/DATA/postroom/postroom.env]
     environment:
@@ -101,7 +101,7 @@ services:
     depends_on:
       postgres: { condition: service_healthy }
   api:
-    image: ghcr.io/matdemers1/d3-postroom/server:sha-SHA
+    image: ghcr.io/d3cloud-io/d3-postroom/server:sha-SHA
     command: ["api"]
     env_file: [/DATA/postroom/postroom.env]
     environment:
@@ -118,7 +118,7 @@ services:
     depends_on:
       postgres: { condition: service_healthy }
   worker:
-    image: ghcr.io/matdemers1/d3-postroom/server:sha-SHA
+    image: ghcr.io/d3cloud-io/d3-postroom/server:sha-SHA
     command: ["worker"]
     env_file: [/DATA/postroom/postroom.env]
     environment:

@@ -17,8 +17,8 @@ Any time a commit on `main` should become the live server: a feature, a fix, a d
 ## Prerequisites
 
 - The commit is on `main` and CI (`.github/workflows/ci.yml`: lint → unit → integration → e2e →
-  images) is green, which is what publishes `ghcr.io/matdemers1/d3-postroom/server:sha-<40hex>` and
-  `ghcr.io/matdemers1/d3-postroom/wireguard:sha-<40hex>`.
+  images) is green, which is what publishes `ghcr.io/d3cloud-io/d3-postroom/server:sha-<40hex>` and
+  `ghcr.io/d3cloud-io/d3-postroom/wireguard:sha-<40hex>`.
 - The commit's images are ahead of what is currently live (Shipyard's agent checks this itself and
   refuses otherwise).
 - Access to Shipyard: either its console/MCP at `https://shipyard.d3cloud.io` (bearer token from
